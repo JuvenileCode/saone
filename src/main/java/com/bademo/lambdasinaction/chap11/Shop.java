@@ -1,7 +1,7 @@
 package com.bademo.lambdasinaction.chap11;
 
-import static lambdasinaction.chap11.Util.delay;
-import static lambdasinaction.chap11.Util.format;
+import static com.bademo.lambdasinaction.chap11.Util.delay;
+import static com.bademo.lambdasinaction.chap11.Util.format;
 
 import java.util.Random;
 

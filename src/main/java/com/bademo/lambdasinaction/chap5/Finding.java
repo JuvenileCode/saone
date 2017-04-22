@@ -1,10 +1,10 @@
 package com.bademo.lambdasinaction.chap5;
-import lambdasinaction.chap4.*;
+import com.bademo.lambdasinaction.chap4.*;
 
 import java.util.stream.*;
 import java.util.*;
 
-import static lambdasinaction.chap4.Dish.menu;
+import static com.bademo.lambdasinaction.chap4.Dish.menu;
 
 public class Finding{
 

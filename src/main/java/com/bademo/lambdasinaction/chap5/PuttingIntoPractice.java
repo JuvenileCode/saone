@@ -1,6 +1,6 @@
 package com.bademo.lambdasinaction.chap5;
 
-import lambdasinaction.chap5.*;
+import com.bademo.lambdasinaction.chap5.*;
 
 import java.util.*;
 

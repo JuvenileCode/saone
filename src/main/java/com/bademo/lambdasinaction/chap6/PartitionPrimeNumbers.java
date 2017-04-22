@@ -10,17 +10,17 @@ import static java.util.stream.Collector.Characteristics.*;
 public class PartitionPrimeNumbers {
 
     public static void main(String ... args) {
-        System.out.println("Numbers partitioned in prime and non-prime: " + partitionPrimes(100));
+        //System.out.println("Numbers partitioned in prime and non-prime: " + partitionPrimes(100));
         System.out.println("Numbers partitioned in prime and non-prime: " + partitionPrimesWithCustomCollector(100));
 
     }
 
-    public static Map<Boolean, List<Integer>> partitionPrimes(int n) {
+   /* public static Map<Boolean, List<Integer>> partitionPrimes(int n) {
         return IntStream.rangeClosed(2, n).boxed()
-                .collect(partitioningBy(candidate -> isPrime(candidate)));
+                .collect(partitioningBy(candidate -> isPrime(acc.get(true), candidate)));
     }
-
-    public static boolean isPrime(int candidate) {
+*/
+    public static boolean isPrime(List<Integer> integers, int candidate) {
         return IntStream.rangeClosed(2, candidate-1)
                 .limit((long) Math.floor(Math.sqrt((double) candidate)) - 1)
                 .noneMatch(i -> candidate % i == 0);
@@ -30,11 +30,11 @@ public class PartitionPrimeNumbers {
         return IntStream.rangeClosed(2, n).boxed().collect(new PrimeNumbersCollector());
     }
 
-    public static boolean isPrime(List<Integer> primes, Integer candidate) {
+    /*public static boolean isPrime(List<Integer> primes, Integer candidate) {
         double candidateRoot = Math.sqrt((double) candidate);
         //return takeWhile(primes, i -> i <= candidateRoot).stream().noneMatch(i -> candidate % i == 0);
         return primes.stream().takeWhile(i -> i <= candidateRoot).noneMatch(i -> candidate % i == 0);
-    }
+    }*/
 /*
     public static <A> List<A> takeWhile(List<A> list, Predicate<A> p) {
         int i = 0;
@@ -65,6 +65,7 @@ public class PartitionPrimeNumbers {
                         candidate) )
                         .add(candidate);
             };
+            //return null;
         }
 
         @Override

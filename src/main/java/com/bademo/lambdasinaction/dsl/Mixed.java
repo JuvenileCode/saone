@@ -16,11 +16,11 @@
 
 package com.bademo.lambdasinaction.dsl;
 
-import lambdasinaction.dsl.model.Order;
+import com.bademo.lambdasinaction.dsl.model.Order;
 
-import static lambdasinaction.dsl.MixedBuilder.buy;
-import static lambdasinaction.dsl.MixedBuilder.sell;
-import static lambdasinaction.dsl.MixedBuilder.forCustomer;
+import static com.bademo.lambdasinaction.dsl.MixedBuilder.buy;
+import static com.bademo.lambdasinaction.dsl.MixedBuilder.sell;
+import static com.bademo.lambdasinaction.dsl.MixedBuilder.forCustomer;
 
 public class Mixed {
     public void mixed() {

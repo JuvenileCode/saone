@@ -16,9 +16,9 @@
 
 package com.bademo.lambdasinaction.dsl;
 
-import lambdasinaction.dsl.model.Order;
-import lambdasinaction.dsl.model.Stock;
-import lambdasinaction.dsl.model.Trade;
+import com.bademo.lambdasinaction.dsl.model.Order;
+import com.bademo.lambdasinaction.dsl.model.Stock;
+import com.bademo.lambdasinaction.dsl.model.Trade;
 
 import java.util.function.Consumer;
 

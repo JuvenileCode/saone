@@ -16,8 +16,8 @@
 
 package com.bademo.lambdasinaction.dsl;
 
-import lambdasinaction.dsl.model.Order;
-import lambdasinaction.dsl.model.Tax;
+import com.bademo.lambdasinaction.dsl.model.Order;
+import com.bademo.lambdasinaction.dsl.model.Tax;
 
 import java.util.function.Function;
 

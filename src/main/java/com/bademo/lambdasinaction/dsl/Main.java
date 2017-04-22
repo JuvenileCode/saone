@@ -16,12 +16,12 @@
 
 package com.bademo.lambdasinaction.dsl;
 
-import lambdasinaction.dsl.model.Order;
-import lambdasinaction.dsl.model.Stock;
-import lambdasinaction.dsl.model.Trade;
+import com.bademo.lambdasinaction.dsl.model.Order;
+import com.bademo.lambdasinaction.dsl.model.Stock;
+import com.bademo.lambdasinaction.dsl.model.Trade;
 
-import static lambdasinaction.dsl.MethodChainingOrderBuilder.forCustomer;
-import static lambdasinaction.dsl.NestedFunctionOrderBuilder.*;
+import static com.bademo.lambdasinaction.dsl.MethodChainingOrderBuilder.forCustomer;
+import static com.bademo.lambdasinaction.dsl.NestedFunctionOrderBuilder.*;
 
 public class Main {
 
