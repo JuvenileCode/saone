@@ -52,7 +52,12 @@
             <artifactId>junit</artifactId>
             <version>4.11</version>
         </dependency>
-
+         <!--apache工具类-->
+        <dependency>
+            <groupId>commons-beanutils</groupId>
+            <artifactId>commons-beanutils</artifactId>
+            <version>1.8.3</version>
+        </dependency>
 
     </dependencies>
 
