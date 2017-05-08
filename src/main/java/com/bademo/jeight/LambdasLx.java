@@ -1,5 +1,9 @@
 package com.bademo.jeight;
 
+import org.springframework.beans.BeanUtils;
+
+import java.util.function.Predicate;
+
 /**
  * Created by:Lambda 表达式练习
  *
@@ -20,9 +24,23 @@ public class LambdasLx {
         Runnable r1 = () -> System.out.println("Hello world 1");
         r1.run();
         process(() -> System.out.println("woshi".length()));
+        String[] aa={"aa","bb","cc"};
+        String[] bb=LambdasLx.strFilter(aa,(String s)->"cc".equals(s));
+        System.out.println(bb[0]);
+
     }
 
     private static void process(Runnable r){
         r.run();
+    }
+
+    public static String[] strFilter(String[] sz, Predicate<String> p){
+        String[] sztow=new String[sz.length];
+        for (String szStr:sz){
+            if(p.test(szStr)){
+                sztow[0]=szStr;
+            }
+        }
+        return sztow;
     }
 }

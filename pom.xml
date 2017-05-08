@@ -58,6 +58,12 @@
             <artifactId>commons-beanutils</artifactId>
             <version>1.8.3</version>
         </dependency>
+        <!--Orika 更简单，更轻巧，更快捷的Java Bean映射-->
+        <dependency>
+            <groupId>ma.glasnost.orika</groupId>
+            <artifactId>orika-core</artifactId>
+            <version>1.5.1</version>
+        </dependency>
 
     </dependencies>
 
