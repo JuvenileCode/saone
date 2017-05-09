@@ -2,11 +2,14 @@ package com.bademo.play;
 
 import com.bademo.play.bean.BasicPerson;
 import com.bademo.play.bean.BasicPersonDto;
+import com.bademo.play.bean.Dota;
 import ma.glasnost.orika.BoundMapperFacade;
 import ma.glasnost.orika.MapperFacade;
 import ma.glasnost.orika.MapperFactory;
+import ma.glasnost.orika.impl.ConfigurableMapper;
 import ma.glasnost.orika.impl.DefaultMapperFactory;
 
+import java.math.BigDecimal;
 import java.util.Date;
 
 /**
@@ -21,6 +24,7 @@ public class OrikaBeanTest {
     private static final MapperFactory mapperFactory = new DefaultMapperFactory.Builder().build();
 
     public static void main(String[] args) {
+
         BasicPerson bpOne = new BasicPerson();
         bpOne.setName("Orika碉堡了");
         bpOne.setAge(18);
@@ -29,9 +33,11 @@ public class OrikaBeanTest {
 
         //2 注册字段映射，转换器，自定义映射器，具体类型等[可以List,map转换]
         mapperFactory.classMap(BasicPerson.class, BasicPersonDto.class)
-                 //.mapNulls(false).mapNullsInReverse(false) //TODO 为null不映射不知为什么不行
+                //.mapNulls(false).mapNullsInReverse(false) //TODO 为null不映射不知为什么不行
                 .field("name", "fullName")
                 .field("age", "currentAge")
+                .field("dota","zhenSan")
+                 //.exclude("yq") //映射中排除一个字段
                 .byDefault()  //属性类型和名字一样默认转换
                 .register();
 

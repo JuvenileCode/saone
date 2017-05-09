@@ -13,6 +13,7 @@ public class BasicPerson {
     private Date birthDate;
     private double yq;
 
+
     public String getName() {
         return name;
     }
@@ -44,6 +45,7 @@ public class BasicPerson {
     public void setYq(double yq) {
         this.yq = yq;
     }
+
 
     @Override
     public String toString() {

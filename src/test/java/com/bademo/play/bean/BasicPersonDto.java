@@ -13,6 +13,7 @@ public class BasicPersonDto {
     private Date birthDate;
     private double yq;
 
+
     public String getFullName() {
         return fullName;
     }
@@ -44,6 +45,7 @@ public class BasicPersonDto {
     public void setYq(double yq) {
         this.yq = yq;
     }
+
 
     @Override
     public String toString() {
