@@ -29,7 +29,7 @@ public class RSACoder extends Coder {
      */
     public static Map<String, Object> initKey() throws Exception {
         KeyPairGenerator keyPairGenerator = KeyPairGenerator.getInstance(KEY_ALGORTHM);
-        keyPairGenerator.initialize(1024);
+        keyPairGenerator.initialize(512);
         KeyPair keyPair = keyPairGenerator.generateKeyPair();
 
         //公钥
@@ -213,12 +213,12 @@ public class RSACoder extends Coder {
         try {
             Map gs = initKey();
             Map gs2 = initKey();
-            //System.out.println(getPublicKey(gs)+" .. "+getPrivateKey(gs));
-            String sign = sign("我是".getBytes(), getPrivateKey(gs));
-            System.out.println(sign+" "+getPublicKey(gs));
-
-            System.out.println(verify("我是".getBytes(),getPublicKey(gs),sign));
-            System.out.println(verify("我是".getBytes(),getPublicKey(gs2),sign));
+            System.out.println(getPublicKey(gs)+" .. "+getPrivateKey(gs));
+//            String sign = sign("我是".getBytes(), getPrivateKey(gs));
+//            System.out.println(sign+" "+getPublicKey(gs));
+//
+//            System.out.println(verify("我是".getBytes(),getPublicKey(gs),sign));
+//            System.out.println(verify("我是".getBytes(),getPublicKey(gs2),sign));
 
         } catch (Exception e) {
             e.printStackTrace();

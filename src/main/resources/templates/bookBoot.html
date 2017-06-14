@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>SpringBoot Boot练习</title>
+    <style>
+        body {
+            background-color: #cccccc;
+            font-family: arial, helvetica, sans-serif;
+        }
+        .bookHeadline {
+            font-size:12pt;
+            font-weight: bold;
+        }
+        .bookDescription {
+            font-size: 10pt;
+        }
+        label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<h2>your book list</h2>
+<div th:unless="${#lists.isEmpty(bbt)}">
+    <d1 th:each="bbt:${bbt}">
+        <dt class="bookHeadline">
+            <span th:text="${bbt.title}">Title</span>
+            <span th:text="${bbt.author}">Author</span>
+            (ISBN:<span th:text="${bbt.isbn}">ISBN</span>)
+        </dt>
+        <dd class="bookDescription">
+        <span th:if="${bbk.description}"
+              th:text="${bbk.description}">Description</span>
+            <span th:if="${bbk.description eq null}"> no Description available </span>
+        </dd>
+    </d1>
+</div>
+<div th:if="${lists.isEmpty(bbt)}">
+    <p>You have no books in your book list</p>
+</div>
+
+<hr/>
+
+<form method="post">
+    <label for="title">Title:</label>
+    <input type="text" name="title" size="50" /><br/>
+    <label for="author">Title:</label>
+    <input type="text" name="author" size="50" /><br/>
+    <label for="isbn">Title:</label>
+    <input type="text" name="isbn" size="50" /><br/>
+    <label for="description">description:</label><br/>
+    <textarea name="description" cols="80" rows="5"></textarea><br/>
+    <input type="submit"></input>
+</form>
+</body>
+</html>
