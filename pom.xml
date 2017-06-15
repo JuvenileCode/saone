@@ -49,6 +49,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.41</version>
         </dependency>
         <!-- 测试 -->
         <dependency>
@@ -67,11 +68,6 @@
             <artifactId>jmh-generator-annprocess</artifactId>
             <version>1.17.4</version>
         </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.11</version>
-        </dependency>
          <!--apache工具类-->
         <dependency>
             <groupId>commons-beanutils</groupId>
@@ -83,6 +79,10 @@
             <groupId>ma.glasnost.orika</groupId>
             <artifactId>orika-core</artifactId>
             <version>1.5.1</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
         </dependency>
 
     </dependencies>

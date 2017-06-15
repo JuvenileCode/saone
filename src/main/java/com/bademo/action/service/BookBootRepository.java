@@ -10,7 +10,7 @@ import java.util.List;
  * User: dota.liu.bin@gmail.com
  * Date: 2017/6/14 0014.16:19
  */
-public interface BookBootJpaService extends JpaRepository<BookBoot, Integer> {
+public interface BookBootRepository extends JpaRepository<BookBoot, Integer> {
 
     List<BookBoot> findByReader(String reader);
 
