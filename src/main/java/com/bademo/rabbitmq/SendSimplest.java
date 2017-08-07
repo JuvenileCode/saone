@@ -8,6 +8,7 @@ import com.rabbitmq.client.ConnectionFactory;
  * Created by:rabbitMq helloworld使用
  * 发送者-[depth-https://my.oschina.net/u/1396185/blog/700884]
  * 官网代码示例-[https://www.rabbitmq.com/getstarted.html]
+ * RecvSimplest接收代码
  * @author Bin.l
  * @date 2017/8/3 21:33
  */

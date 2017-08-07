@@ -7,6 +7,7 @@ import java.io.IOException;
 /**
  * Created by:rabbitMq helloworld使用
  * 接收方
+ * SendSimplest 发送代码
  * @author Bin.l
  * @date 2017/8/3 21:51
  */
