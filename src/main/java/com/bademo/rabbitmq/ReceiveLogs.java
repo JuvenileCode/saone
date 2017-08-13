@@ -27,7 +27,7 @@ public class ReceiveLogs {
         //创建一个非持久，排他，自动删除队列
         String queueName = channel.queueDeclare().getQueue();
         //交换器和队列绑定
-        channel.queueBind(queueName, "logs", "");
+        channel.queueBind(queueName, EXCHANGE_NAME, "");
         System.out.println(" [*] Waiting for messages. To exit press CTRL+C");
 
         Consumer consumer = new DefaultConsumer(channel) {
