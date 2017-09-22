@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!-- 测试数据和文件一起提交  -->
+<html>
+<head>
+    <titile></titile>
+</head>
+<body>
+
+ <form action="http://localhost:8080/upload/file" name="form" method="POST" enctype="multipart/form-data">
+     username: <input type="text" name="username"/><br/>
+     age: <input type="text" name="age"/><br/>
+     password: <input type="password" name="password"/><br/>
+     yourmail: <input type="text" name="email"/><br/>
+     family.address :<input type="text" name="familyList[0].address	"/><br/>
+     family.have :<input type="text" name="familyList[0].have"/><br/>
+     family.address :<input type="text" name="familyList[1].address"/><br/>
+     family.have :<input type="text" name="familyList[1].have"/><br/>
+     yourfile: <input type="file" name="files"/><br/>
+     <input type="submit" value="submit"/>
+ </form>
+
+</body>
+
+</html>
+
