@@ -1,5 +1,8 @@
 package com.bademo.action.bean;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -13,6 +16,8 @@ public class UserTest {
     private String password;
     private String email;
     private Integer age;
+    @DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss")
+    private Date date;
     private Family family;
     private List<Family> familyList;
 
@@ -93,6 +98,14 @@ public class UserTest {
         this.familyList = familyList;
     }
 
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
     @Override
     public String toString() {
         return "UserTest{" +
@@ -100,6 +113,7 @@ public class UserTest {
                 ", password='" + password + '\'' +
                 ", email='" + email + '\'' +
                 ", age=" + age +
+                ", date=" + date +
                 ", family=" + family +
                 ", familyList=" + familyList +
                 '}';
