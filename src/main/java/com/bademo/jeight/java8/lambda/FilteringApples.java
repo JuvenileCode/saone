@@ -1,4 +1,4 @@
-package com.bademo.jeight;
+package com.bademo.jeight.java8.lambda;
 
 import java.util.ArrayList;
 import java.util.Arrays;

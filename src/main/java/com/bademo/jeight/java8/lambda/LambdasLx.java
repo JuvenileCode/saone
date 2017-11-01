@@ -1,6 +1,4 @@
-package com.bademo.jeight;
-
-import org.springframework.beans.BeanUtils;
+package com.bademo.jeight.java8.lambda;
 
 import java.util.function.Predicate;
 
