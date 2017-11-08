@@ -23,6 +23,10 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 
+/**
+ * java8 date Api - chap12
+ */
+
 public class DateTimeExamples {
 
     private static final ThreadLocal<DateFormat> formatters = new ThreadLocal<DateFormat>() {

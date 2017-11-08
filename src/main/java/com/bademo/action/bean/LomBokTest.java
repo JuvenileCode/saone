@@ -16,7 +16,7 @@ public @Getter
 @Setter
 @ToString
 class LomBokTest {
-
+    //http://www.jianshu.com/p/2ea9ff98f7d6
     private String name;
     @NonNull
     private Double sum;

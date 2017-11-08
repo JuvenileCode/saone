@@ -85,6 +85,13 @@ public class PuttingIntoPractice{
             transactions.stream()
                         .map(Transaction::getValue)
                         .reduce(0, Integer::max);
-        System.out.println(highestValue);      
+        System.out.println(highestValue);
+
+        //Query 8: Find the transaction with the smallest transaction amount
+        Optional<Transaction> opt =
+                transactions.stream()
+                            .min(comparing(Transaction::getValue));
+        System.out.println(opt.get());
+
     }
 }
