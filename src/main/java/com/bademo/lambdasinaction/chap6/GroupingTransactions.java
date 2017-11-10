@@ -26,6 +26,7 @@ public class GroupingTransactions {
     }
 
     private static void groupImperatively() {
+        System.out.println(System.currentTimeMillis());
         Map<Currency, List<Transaction>> transactionsByCurrencies = new HashMap<>();
         for (Transaction transaction : transactions) {
             Currency currency = transaction.getCurrency();
@@ -36,12 +37,14 @@ public class GroupingTransactions {
             }
             transactionsForCurrency.add(transaction);
         }
-
+        System.out.println(System.currentTimeMillis());
         System.out.println(transactionsByCurrencies);
     }
 
     private static void groupFunctionally() {
+        System.out.println(System.currentTimeMillis());
         Map<Currency, List<Transaction>> transactionsByCurrencies = transactions.stream().collect(groupingBy(Transaction::getCurrency));
+        System.out.println(System.currentTimeMillis());
         System.out.println(transactionsByCurrencies);
     }
 

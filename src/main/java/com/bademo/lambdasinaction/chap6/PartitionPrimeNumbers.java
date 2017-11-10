@@ -47,6 +47,10 @@ public class PartitionPrimeNumbers {
         return list;
     }
 */
+
+    /**
+     * 自定义收集器实现
+     */
     public static class PrimeNumbersCollector
             implements Collector<Integer, Map<Boolean, List<Integer>>, Map<Boolean, List<Integer>>> {
 
