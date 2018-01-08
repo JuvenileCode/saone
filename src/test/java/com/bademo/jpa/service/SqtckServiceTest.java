@@ -27,11 +27,6 @@ public class SqtckServiceTest {
 
 
     @Test
-    public void message() {
-        service.message();
-    }
-
-    @Test
     public void add() {
         SqtckModel ob = new SqtckModel()
                         .setPaper("CKD003").setPcid(15).setKcid(16)
@@ -70,6 +65,15 @@ public class SqtckServiceTest {
     @Test
     public void findByPriceAndNumber(){
         System.out.println(service.findByPriceAndNumberLessThan(BigDecimal.valueOf(122.44),BigDecimal.valueOf(45.55)));
+    }
+
+    @Test
+    public void findDynamic() {
+        SqtckModel model = new SqtckModel();
+        model.setPaper("CKD002");
+        model.setPcid(13);
+        model.setNumber(BigDecimal.valueOf(56.3));
+        System.out.println(service.findDynamic(model));
     }
 
 }
