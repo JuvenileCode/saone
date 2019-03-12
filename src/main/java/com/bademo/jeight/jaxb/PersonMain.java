@@ -19,7 +19,7 @@ public class PersonMain {
     public static void main(String[] args) throws Exception {
         modelOfXml();
         System.out.println("-------------------");
-        xmlOfModel();
+        //xmlOfModel();
     }
 
     /**

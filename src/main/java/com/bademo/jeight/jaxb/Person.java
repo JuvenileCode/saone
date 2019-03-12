@@ -1,8 +1,6 @@
 package com.bademo.jeight.jaxb;
 
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlElementWrapper;
-import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.*;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.time.LocalDateTime;
 import java.util.List;
@@ -12,7 +10,8 @@ import java.util.List;
  * @Author Bin.Liu
  * @Date 2018/10/19 13:22
  */
-@XmlRootElement(name = "person")
+@XmlRootElement()
+@XmlAccessorType(XmlAccessType.PUBLIC_MEMBER)
 public class Person {
 
     private String firstName;
