@@ -116,8 +116,7 @@ public class BitSetDemo {
         int index = 0;
         for (int i = 0; i < bytes.length; i++) {
             for (int j = 7; j >= 0; j--) {
-                bitSet.set(index++, (bytes[i] & (1 << j)) >> j == 1 ? true
-                        : false);
+                bitSet.set(index++, (bytes[i] & (1 << j)) >> j == 1 ? true : false);
             }
         }
         return bitSet;
