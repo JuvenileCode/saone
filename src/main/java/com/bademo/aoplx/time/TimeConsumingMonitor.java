@@ -1,6 +1,6 @@
 package com.bademo.aoplx.time;
 
-import com.alibaba.fastjson.JSON;
+import com.google.gson.Gson;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.Signature;
 import org.aspectj.lang.annotation.Around;
@@ -24,10 +24,10 @@ public class TimeConsumingMonitor {
     /**
      * 拦截类上的 TimeConsuming 注解
      */
-    /*@Around(value = "@annotation(timeConsuming)")
+    @Around(value = "@within(timeConsuming)")
     public Object cutClazz(ProceedingJoinPoint joinPoint, TimeConsuming timeConsuming) throws Throwable {
         return logging(joinPoint, timeConsuming);
-    }*/
+    }
 
     /**
      * 拦截方法上的 TimeConsuming 注解
@@ -151,7 +151,7 @@ public class TimeConsumingMonitor {
      * @return 摘要
      */
     private String summary(Object obj, boolean fullMsg) {
-        String argsString = JSON.toJSONString(obj);
+        String argsString = new Gson().toJson(obj);
         if (fullMsg) {
             return argsString;
         }
