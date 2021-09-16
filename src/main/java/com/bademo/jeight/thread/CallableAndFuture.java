@@ -36,6 +36,10 @@ public class CallableAndFuture {
         System.out.println("====此时需要获取上面异步任务的执行结果");
 
         boolean flag = true;
+
+        /*HashMap<String, String> futureResult = future.get();
+        System.out.println("====异步任务返回的结果是：" + futureResult.get("futureKey"));*/
+
         while (flag) {
             //异步任务完成并且未被取消，则获取返回的结果
             if (future.isDone() && !future.isCancelled()) {

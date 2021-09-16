@@ -47,8 +47,8 @@ public class TreeBuild {
 
         Gson gson = new Gson();
         System.out.println(System.currentTimeMillis());
-        System.out.println(gson.toJson(buildByRecursive(list)));
-        // System.out.println(gson.toJson(bulid(list)));
+        // System.out.println(gson.toJson(buildByRecursive(list)));
+        System.out.println(gson.toJson(bulid(list)));
         System.out.println(System.currentTimeMillis());
 
 
